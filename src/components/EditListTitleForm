@@ -2,14 +2,14 @@ import  {React, useState} from 'react'
 
 
 //   __________
-//   editTodoForm contains the
+//   editListTitleForm contains the
 //  input form wich appears whe the edit icon is clicked
 //  onSubmit calls the editTaskName()
 //   function (declared inside of the TodoWrapper)
 //   ¯¯¯¯¯¯¯¯¯¯
 
-export const EditTodoForm = ({editTaskName, task}) => {
-    const[value, setValue] = useState(task.task)
+export const EditListTitleForm = ({editListTitle, title}) => {
+    const[value, setValue] = useState(title.title)
 
     const handleSubmit= e =>{
         e.preventDefault();
@@ -18,10 +18,8 @@ export const EditTodoForm = ({editTaskName, task}) => {
     }  
   return (
     <form className='TodoForm' onSubmit={handleSubmit}>
-        <input type="text" className='todo-input' value={value}
-        placeholder='Update the Task'
-         onChange={(e) => setValue(e.target.value)}/>
-        {/* <button type='submit' className='todo-btn' onClick={handleSubmit} >Update Task</button> */}
-        </form>
+        <input type="text" className='title-input' value={value}
+        placeholder='Update the Title'
+        onChange={(e) => setValue(e.target.value)}/>        </form>
   )
 }
