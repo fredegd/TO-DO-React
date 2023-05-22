@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react'
 //
 //here import the icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenSquare } from '@fortawesome/free-solid-svg-icons'
+import { faPencil } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -16,7 +16,7 @@ export const ListTitle = ({title, openListTitleEditor}) => {
     return (
      <>
       <h1>{title}</h1>
-        <FontAwesomeIcon icon={faPenSquare} onClick={()=> openListTitleEditor(title.id)}/>
+        <FontAwesomeIcon  className='icon' icon={faPencil} onClick={()=> openListTitleEditor(title.id)}/>
      </> 
     )
   
