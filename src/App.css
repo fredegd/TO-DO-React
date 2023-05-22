@@ -2,18 +2,86 @@
 font size
 font
 */
+html,body {
+    min-height: 100vh;
+
+  }
+  
+  body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#F6D7A7, #F6EABE, #C8E3D4);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+  
+  
+  h1 {
+      
+      font-family: 'Finger Paint';
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+  }
+  .TodoWrapper {
+    font-family: 'Finger Paint';
+    font-style: normal;
+}
+.todo-input {
+    font-family: 'Finger Paint';
+    font-style: normal;
+    width: 300px; 
+    height: 30px;
+    border-radius: 10px; 
+    font-size: large;
+  }
+  .todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    font-style: normal;
+  }
+  
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    font-weight: 600;
+    font-style: oblique;
+    font-family: 'Finger Paint';
+    }
+  
+.App {
+    width: 100%;
+
+    
+  }
+
+.TodoForm {
+    border-radius: 10%;
+  }
+.todo {
+  background-color: #ffbf86;
+  border-radius: 1em;
+  padding: 1%;
+  margin-top: 10px;
+}
+/* .todo input[type="checkbox"]:checked + p  */
+.todo-done {
+  background-color: #C8E3D4;
+  text-decoration: line-through;
+  color: #9b9b9b;
+}
+.icon-container {
+  color: #538484;
+
+}
 
 
-/* Background */
 
-
-
-
-
-/* form input */
-
-
-
-
-/*  todo task */
+  
 

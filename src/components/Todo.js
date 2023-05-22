@@ -15,12 +15,16 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 //
 export const Todo = ({task, openTaskNameEditor, toggleComplete, deleteTodo}) => {
   const [completed, setCompleted] = useState(false);
- 
-    return (
+
+  useEffect(() => {
+    setCompleted(task.completed);
+  }, [task.completed]);
+  
+  return (
       <div className={completed? "todo todo-done" : "todo"}>
        <input type="checkbox" id="checkbox" checked={task.completed} onChange ={() =>toggleComplete(task.id)} ></input>
-        <p>{task.task}</p>
-        <div>
+        <p className={completed ? "outlined-text" : ""}>{task.task}</p>
+        <div class="icon-container">
       <FontAwesomeIcon icon={faPenSquare} onClick={()=> openTaskNameEditor(task.id)}/>
       <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)}/>
         </div>
